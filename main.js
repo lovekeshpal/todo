@@ -1,11 +1,12 @@
 const input = document.getElementById("input");
 const form = document.getElementById("form");
 const list = document.getElementById("list");
-const item = document.createElement("li");
+
 const emptyWarning = document.createElement("p");
 
 //Function For Adding a Task
 const addTodo = (value) => {
+  let item = document.createElement("li");
   item.innerText = value;
   list.appendChild(item);
   input.value = "";
@@ -19,6 +20,10 @@ const addTodo = (value) => {
   deleteTodo.addEventListener("click", (e) => {
     item.remove();
   });
+
+  item.onclick = () => {
+    item.classList.toggle("done");
+  };
 };
 
 // For Adding a Task
@@ -40,9 +45,4 @@ form.addEventListener("submit", (e) => {
 input.onclick = () => {
   input.style.border = "1px solid black";
   emptyWarning.innerText = "";
-};
-
-item.onclick = () => {
-
-  item.classList.toggle("done");
 };

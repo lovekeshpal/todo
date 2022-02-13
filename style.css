@@ -34,6 +34,14 @@ input:focus {
   outline: none;
 }
 
+.submitButton {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #818181;
+  color: #efefef;
+}
+
 form p {
   margin-top: 10px;
   color: #ee4141;
@@ -65,4 +73,4 @@ li i {
 
 .done {
   text-decoration: line-through;
-}
+} 
